@@ -30,6 +30,7 @@ Soon to be functions include:
     -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
 
 To install, run:
-  git clone https://github.com/korn101/PiControl/
+    
+    git clone https://github.com/korn101/PiControl/
 
 And automate network_check.py to run at boot, using either rc.local or equivalent.
