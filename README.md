@@ -27,7 +27,7 @@ Soon to be functions include:
 
     -Backup contents of selected drive to ExtHDD
 
-    -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard             system)
+    -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
 
 To install, run:
   git clone https://github.com/korn101/PiControl/
