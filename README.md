@@ -9,16 +9,24 @@ PiControl lets you control an internet connected Raspberry Pi (NAS optional) run
 System Functions include:
   
   -Idle Mode (with clock display)
+  
   -PiDiag (see crucial hardware specs ie. clock speeds, temp, memory split)
+  
   -Wifi Diag (see current Wifi network, check connectivity to router and internet)
+  
   -Halt System (perform a safe system halt/shutdown)
+  
   -Restart System (perform a safe system restart)
   
 Soon to be functions include:
   -Options dialogs for menu options
+
   -Run rpi-update, apt-get update, apt-get upgrade
+
   -Check connected HDD
+
   -Backup contents of selected drive to ExtHDD
+
   -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
 
 To install, run:
