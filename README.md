@@ -28,6 +28,8 @@ Soon to be functions include:
     -Backup contents of selected drive to ExtHDD
 
     -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
+    
+    - Live & Continuous temperature 'watching' console
 
 To install, run:
     
