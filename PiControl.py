@@ -2,6 +2,7 @@
 # Example using a character LCD plate.
 
 # GJ FOUCHE 12/12/21
+# KT
 import math
 import time
 import socket
