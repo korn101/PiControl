@@ -6,6 +6,12 @@ Built on latest Raspbian (2014-09-09) at time of writing readme (2014-12-16)
 
 PiControl lets you control an internet connected Raspberry Pi (NAS optional) running Raspbian, via the Adafruit 16x2 LCD Plate. The idea was to create a simple hierarchical menu system to provide basic system functionality for a NAS Pi through the use of the LCD and Tactile buttons provided by the Adafruit i2c LCD Plate.
 
+To Install: 
+  1. Open terminal window or SSH into pi.
+  2. Run the terminal command: "git clone https://github.com/korn101/PiControl"
+  3. You now have a working copy of PiControl in your /home/pi/PiControl directory, but we're not done yet.
+  4. Automate the running of the /home/pi/PiControl/PiControl.py script. See here: http://www.raspberrypi.org/documentation/linux/usage/rc-local.md
+
 System Functions include:
   
     -Idle Mode (with clock display)
@@ -31,8 +37,23 @@ Soon to be functions include:
     
     - Live & Continuous temperature 'watching' console
 
-To install, run:
-    
-    git clone https://github.com/korn101/PiControl/
+=================
 
-And automate network_check.py to run at boot, using either rc.local or equivalent.
+Developers Notes:
+
+Install, Dev & Maintenance Instructions
+===
+Cloning the repository / Install:
+  1. Open terminal and cd to home directory. ie. /home/pi/
+  2. Run "git clone https://github.com/korn101/PiControl" to clone repository to the pi.
+  3. Project folder is now under /home/pi/PiControl/
+  4. Enter the project folder with "cd PiControl"
+  5. Make changes as you wish. Then continue to next section of steps.
+
+To commit changes:
+  1. Open terminal, cd into /home/pi/PiControl
+  2. Run "git add PiControl.py", "git add piconf.ini" , etc. To add to commit list.
+  3. Run "git commit -m "<commit message>""
+  4. Push the commit to master with: "git push master origin"
+  5. Done! :)
+(or use the update.sh automated script!)
