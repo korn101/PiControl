@@ -1,9 +1,8 @@
 #!/usr/bin/python
 # Example using a character LCD plate.
+# KT VENT
 
-# GJ FOUCHE 12/12/21
-# KT VENT 
-# SUDO YASVOOT
+
 import math
 import time
 import socket
@@ -13,9 +12,6 @@ import struct
 import os
 import subprocess
 import re
-
-
-
 
 from configobj import ConfigObj
 
@@ -54,6 +50,7 @@ menuDesc=["Show Clock&Date", "Connection Info", "Temp/Mem/Clock", "Shutdown Syst
 piDiagList=["Temp", "Memory Split", "Clocks"]
 wifiDiagList=["SSID Info", "IP Info", "Test Con."]
 wifiDiagDesc=["Show wifi SSID", "List interfaces", "Router&Web access"]
+
 
 def findThisProcess( process_name ):
   ps     = subprocess.Popen("ps -eaf | grep "+process_name, shell=True, stdout=subprocess.PIPE)
