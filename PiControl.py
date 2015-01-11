@@ -46,8 +46,8 @@ CLOCK_BLANK_TIME = 120
 #config:
 
 
-menuList=["Idle mode","WiFi Diag", "Pi Diag", "Halt", "Reboot", "Display OFF", "Settings", "About"]
-menuDesc=["Show Clock&Date", "Connection Info", "Temp/Mem/Clock", "Shutdown System", "Reboot System", "Turn off display", "Change Options", ".. PiControl"]
+menuList=["Idle mode","WiFi Diag", "Pi Diag", "Halt", "Reboot", "Display OFF", "Settings", "About", "PiNumberStation", "Stop PiNS"]
+menuDesc=["Show Clock&Date", "Connection Info", "Temp/Mem/Clock", "Shutdown System", "Reboot System", "Turn off display", "Change Options", ".. PiControl", "tvoya tsel zdes", "PiNumberStation"]
 piDiagList=["Temp", "Memory Split", "Clocks"]
 wifiDiagList=["SSID Info", "IP Info", "Test Con."]
 wifiDiagDesc=["Show wifi SSID", "List interfaces", "Router&Web access"]
@@ -553,6 +553,34 @@ def backlightOff():
 			lcd.enable_display(True)
 			lcd.set_backlight(1)
 			return
+
+def pins():
+
+	#strBroadcast = "103.3"
+	strBroadcast = str(integerDialog("hundreds", 0, 2))
+	strBroadcast += str(integerDialog(strBroadcast[0] + "x", 0, 9))
+	strBroadcast += str(integerDialog(strBroadcast[0] + strBroadcast[1] + "x", 0, 9))
+	strBroadcast += "."
+	strBroadcast += str(integerDialog(strBroadcast[0] + strBroadcast[1] + strBroadcast[2] + ".x",0,9))
+	
+	subprocess.Popen(["sudo","python", "/home/pi/PiNumberStation/PiNS.py", strBroadcast, "&"])
+
+	prompt("PiNumberStation begun on frequency " + strBroadcast)
+	time.sleep(1)
+
+	return
+
+def exit_pins():
+
+	subprocess.call(["sudo", "killall", "pifm"])
+	
+	subprocess.call(["sudo", "pkill", "-9", "-f", "PiNS.py"])
+
+	import RPi.GPIO as GPIO
+	GPIO.setup(4, GPIO.OUT)
+	GPIO.output(4, GPIO.LOW)
+
+	return
 	
 	
 def menu_exec( param ):
@@ -576,6 +604,10 @@ def menu_exec( param ):
 		setting_diag()
 	if param == 7:
 		about_diag()
+	if param == 8:
+		pins()
+	if param == 9:
+		exit_pins()
 		
 	update_menu(menuSelect)
 	
