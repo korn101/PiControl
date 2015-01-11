@@ -2,6 +2,7 @@
 # Example using a character LCD plate.
 # KT VENT
 
+#SLOOSH
 
 import math
 import time
