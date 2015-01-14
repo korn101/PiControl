@@ -13,29 +13,26 @@ To Install:
   4. Automate the running of the /home/pi/PiControl/PiControl.py script. See here: http://www.raspberrypi.org/documentation/linux/usage/rc-local.md
 
 System Functions include:
-  
-    -Idle Mode (with clock display)
-  
-    -PiDiag (see crucial hardware specs ie. clock speeds, temp, memory split)
-  
-    -Wifi Diag (see current Wifi network, check connectivity to router and internet)
-  
-    -Halt System (perform a safe system halt/shutdown)
-  
-    -Restart System (perform a safe system restart)
-  
+* Idle Mode (with clock display)
+* PiDiag (see crucial hardware specs ie. clock speeds, temp, memory split)
+* Wifi Diag (see current Wifi network, check connectivity to router and internet)
+* Halt System (perform a safe system halt/shutdown)
+* Restart System (perform a safe system restart)
+* Run a PiNumberStation in the background. See: https://github.com/korn101/PiNumberStation
+
+New Updates include:
+* Check connected HDD ✓
+* Settings menu and configuration file support ✓
+* PiNumberStation support for broadcast on user-defined frequency ✓
+* Integer Dialog Support ✓
+* Boolean Dialog Support ✓
+
 Soon to be functions include:
-    -Options dialogs for menu options
-
-    -Run rpi-update, apt-get update, apt-get upgrade
-
-    -Check connected HDD
-
-    -Backup contents of selected drive to ExtHDD
-
-    -Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
-    
-    - Live & Continuous temperature 'watching' console
+* Run rpi-update, apt-get update, apt-get upgrade
+* Backup contents of selected drive to ExtHDD
+* Connect/Disconnect to and from different wifi networks (including password entry dialog and basic keyboard system)
+* Live & Continuous temperature 'watching' console
+* Yowsup functionality to pass commands over Whatsapp
 
 =================
 
