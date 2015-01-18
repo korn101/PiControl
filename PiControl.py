@@ -324,7 +324,7 @@ def about_diag():
 		
 		
 	lcd.clear()
-	lcd.message("    PiControl    \n  Jaime Fouche  ")
+	lcd.message("    PiControl    \n     korn101   ")
 	warning(1)
 	lcd.show_cursor(False)
 	lcd.blink(False)
@@ -556,17 +556,25 @@ def backlightOff():
 
 def pins():
 
+	lcd.clear()
+	lcd.message("PiNumberStation")
+	time.sleep(1)
+	lcd.clear()
 	#strBroadcast = "103.3"
 	strBroadcast = str(integerDialog("hundreds", 0, 2))
 	strBroadcast += str(integerDialog(strBroadcast[0] + "x", 0, 9))
 	strBroadcast += str(integerDialog(strBroadcast[0] + strBroadcast[1] + "x", 0, 9))
 	strBroadcast += "."
 	strBroadcast += str(integerDialog(strBroadcast[0] + strBroadcast[1] + strBroadcast[2] + ".x",0,9))
-	
-	subprocess.Popen(["sudo","python", "/home/pi/PiNumberStation/PiNS.py", strBroadcast, "&"])
 
-	prompt("PiNumberStation begun on frequency " + strBroadcast)
-	time.sleep(1)
+	if (strBroadcast == "000.0"):
+		prompt("Invalid frequency")
+		return
+	else:
+		subprocess.Popen(["sudo","python", "/home/pi/PiNumberStation/PiNS.py", strBroadcast, "&"])
+
+		prompt("PiNumberStation begun on frequency " + strBroadcast)
+		time.sleep(1)
 
 	return
 
