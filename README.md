@@ -26,6 +26,7 @@ New Updates include:
 * PiNumberStation support for broadcast on user-defined frequency ✓
 * Integer Dialog Support ✓
 * Boolean Dialog Support ✓
+* Automatic display dimming after set amount of time ✓
 
 Soon to be functions include:
 * Run rpi-update, apt-get update, apt-get upgrade
